@@ -27,7 +27,7 @@ public class MainFrame extends JFrame {
 	/**
 	 * Launch the application.
 	 * HEJ JOHAN
-	 * test1
+	 * test12
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
