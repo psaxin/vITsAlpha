@@ -13,6 +13,7 @@ public class MainFrame extends JFrame {
 
 	/**
 	 * Launch the application.
+	 * HEJ JOHAN
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
