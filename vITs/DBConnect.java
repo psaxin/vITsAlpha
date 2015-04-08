@@ -16,7 +16,6 @@ public class DBConnect {
 
     private Connection connect = null;
     private Statement statement = null;
-    private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
     /**
