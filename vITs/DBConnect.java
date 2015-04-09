@@ -11,6 +11,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class DBConnect {
 
@@ -23,7 +25,7 @@ public class DBConnect {
      * @param query
      * @throws Exception
      */
-    public void readDB(String query) throws Exception {
+    public ResultSet readDB(String query) throws Exception {
         try {
             // Laddar MySQL-driver.
             Class.forName("com.mysql.jdbc.Driver");
@@ -37,7 +39,7 @@ public class DBConnect {
 
             //ResultSet hämtar resultatet för SQL-queries.
             resultSet = statement.executeQuery(query);
-            writeResultSet(resultSet);
+            return resultSet;
         } catch (Exception e) {
                 throw e;
         } finally {
@@ -110,6 +112,39 @@ public class DBConnect {
         } catch (Exception e) {
 
         }
+    }
+    
+    /**
+     * Skapar ett autoincrement på integerbaserade IDn i databasen. 
+     * Ex: getAutoIncrement("SELECT rid FROM rapport"); ger tillbaka nästa RID i storleksordning.
+     * @return
+     */
+    public int getAutoIncrement(String query) {
+    	
+    	try {
+    		
+    	ResultSet result = readDB(query);
+    	
+    	ArrayList<String> idList = new ArrayList<>();
+    	
+    	int i = 0;
+    	
+    	while (result.next()) {   		
+    		idList.add(result.getString(i));
+    		i++;
+    	}
+    	
+    	Collections.sort(idList);
+    	
+    	return Integer.parseInt(idList.get(i));
+    	
+    	} catch (Exception e) {
+    		
+    		System.out.println(e);
+    		return 0;
+    	}
+    	
+    	
     }
 
 }
