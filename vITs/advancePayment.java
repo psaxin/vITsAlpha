@@ -5,6 +5,9 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.event.PopupMenuListener;
+import javax.swing.event.PopupMenuEvent;
+import java.awt.Choice;
 
 public class advancePayment extends JPanel {
 	private JTextField apNameTf;
@@ -12,21 +15,19 @@ public class advancePayment extends JPanel {
 	private JTextField apDateTf;
 	private JTextField apAmountTf;
 
+	
 	/**
 	 * Create the panel.
 	 */
 	public advancePayment() {
 		setLayout(null);
+		fillAssignmentAp();
 		
 		apNameTf = new JTextField();
 		apNameTf.setEditable(false);
 		apNameTf.setBounds(154, 52, 174, 20);
 		add(apNameTf);
 		apNameTf.setColumns(10);
-		
-		JComboBox apRapportCb = new JComboBox();
-		apRapportCb.setBounds(10, 52, 118, 20);
-		add(apRapportCb);
 		
 		apCountryTf = new JTextField();
 		apCountryTf.setEditable(false);
@@ -68,6 +69,42 @@ public class advancePayment extends JPanel {
 		JButton apSendBtn = new JButton("Ans\u00F6k");
 		apSendBtn.setBounds(412, 221, 89, 23);
 		add(apSendBtn);
+		
+		Choice apAssignmentCb = new Choice();
+		apAssignmentCb.setBounds(10, 52, 89, 20);
+		add(apAssignmentCb);
 
 	}
+	
+	protected void fillNameAp()
+	{
+		String a;
+		apNameTf.setText(a);
+		
+	}
+	
+	protected void fillCountryAp()
+	{
+		String a;
+		apCountryTf.setText(a);
+		
+	}
+
+	protected void fillDateAp()
+	{
+		String a;
+		apDateTf.setText(a);
+		
+
+	}
+	
+	protected void sendRequestAp()
+	{
+		
+		
+	}
+	
+	protected void fillAssignmentAp()
+	{}
 }
+
