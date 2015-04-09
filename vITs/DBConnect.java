@@ -31,8 +31,8 @@ public class DBConnect {
             Class.forName("com.mysql.jdbc.Driver");
             // Setup för DB-uppkopplingen
             connect = DriverManager
-                    .getConnection("jdbc:mysql://localhost/vitsdb?"
-                            + "user=root&password=password");
+                    .getConnection("jdbc:mysql://vitsdb.c8kahyvfhrus.us-west-2.rds.amazonaws.com:3306/vitsdb?"
+                            + "user=master&password=password");
 
             //Statements möjliggör SQL-queries mot databasen
             statement = connect.createStatement();
