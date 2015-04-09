@@ -19,6 +19,7 @@ import javax.swing.JTextField;
 
 public class MainFrame extends JFrame {
 
+	private DBConnect con;
 	private JPanel mainPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -26,6 +27,7 @@ public class MainFrame extends JFrame {
 	/**
 	 * Launch the application.
 	 * HEJ JOHAN
+	 * test12
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -91,5 +93,17 @@ public class MainFrame extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(MainFrame.class.getResource("/vITs/resource/vITsLogga.gif")));
 		lblNewLabel.setBounds(5, 0, 508, 147);
 		mainPanel.add(lblNewLabel);
+		
+		
+		/*
+		 * KOD SOM INTE ÄR SWING
+		 */
+	
+		con = new DBConnect();
+		try {
+		con.readDB("SELECT * FROM rapport");
+		} catch (Exception e) {
+			
+		}
 	}
 }
