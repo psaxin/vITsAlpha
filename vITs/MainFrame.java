@@ -18,8 +18,8 @@ public class MainFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainFrame main = new MainFrame();
-					main.setVisible(true);
+					Login login = new Login();
+					login.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

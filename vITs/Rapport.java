@@ -179,7 +179,6 @@ public class Rapport extends JPanel {
 
 	                while ((line = br.readLine()) != null) {
 	                    model.addElement(line);
-	                    System.out.println(line);
 	                }
 
 	                fr.close();
