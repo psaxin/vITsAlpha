@@ -47,7 +47,7 @@ public class MainFrame extends JFrame {
         pack();
 		
 		/*
-		 * KOD SOM INTE ÄR SWING
+		 * KOD SOM INTE Ã„R SWING
 		 */
 	
 	}
