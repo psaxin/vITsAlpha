@@ -8,12 +8,6 @@ import javax.swing.*;
 
 public class MainFrame extends JFrame {
 
-	/**
-	 * 
-	 * @param args
-	 * test12
-	 * test12
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -49,6 +43,13 @@ public class MainFrame extends JFrame {
 		/*
 		 * KOD SOM INTE ÄR SWING
 		 */
+        DBConnect con = new DBConnect();
+        try {
+        System.out.println(con.readDB("select * from rapport").getString(1));
+        } catch (Exception e) {
+        	
+        }
+        
 	
 	}
 }

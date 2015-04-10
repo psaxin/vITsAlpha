@@ -185,7 +185,7 @@ public class Rapport extends JPanel {
 	                br.close();
 
 	            } catch (IOException e) {
-	                System.out.println();
+
 	            }
 	        }
 }

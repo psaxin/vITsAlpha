@@ -3,7 +3,8 @@ package vITs;
 public class Tabs extends javax.swing.JTabbedPane {
 
     public Tabs() {
-
+ 	
+    	
     Rapport rapport = new Rapport();
         addTab("Rapportera", rapport);
 
@@ -12,7 +13,6 @@ public class Tabs extends javax.swing.JTabbedPane {
         
     advancePayment forskott = new advancePayment();
     	addTab("Förskott", forskott);
-
     	
     }
 
