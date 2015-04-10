@@ -94,8 +94,6 @@ public class advancePayment extends JPanel {
 	{
 		String a;
 		apDateTf.setText(a);
-		
-
 	}
 	
 	protected void sendRequestAp()
@@ -105,6 +103,9 @@ public class advancePayment extends JPanel {
 	}
 	
 	protected void fillAssignmentAp()
-	{}
+	{
+		
+		
+	}
 }
 

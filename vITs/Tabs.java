@@ -9,8 +9,11 @@ public class Tabs extends javax.swing.JTabbedPane {
 
     Hantera hantera = new Hantera();
         addTab("Hantera", hantera);
+        
+    advancePayment forskott = new advancePayment();
+    	addTab("Förskott", forskott);
 
-
+    	
     }
 
 }
