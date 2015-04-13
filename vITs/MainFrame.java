@@ -43,13 +43,14 @@ public class MainFrame extends JFrame {
 		/*
 		 * KOD SOM INTE ÄR SWING
 		 */
+        /*
         DBConnect con = new DBConnect();
         try {
         System.out.println(con.readDB("select * from rapport").getString(1));
         } catch (Exception e) {
         	
         }
-        
+        */
 	
 	}
 }
